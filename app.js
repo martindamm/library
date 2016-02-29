@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express();
 
-var port = 2112;
+var port = process.env.PORT || 2112;
 
 app.use(express.static('public'));
 app.use(express.static('src/views'));

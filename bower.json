@@ -1,9 +1,11 @@
 {
     "name": "library",
+    "version": "0.0.0",
     "description": "follow along Pluralsight video",
     "main": "app.js",
     "authors": [
     "Martin Damm"
+    "martindamm@live.dk>"
   ],
     "license": "ISC",
     "moduleType": [],

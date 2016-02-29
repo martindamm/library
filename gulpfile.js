@@ -3,9 +3,9 @@ var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var nodemon = require('gulp-nodemon');
 
-// variabler som bruges til gulp.task('serve')
-var jsFiles = ['*.js', 'src/**/*.js'];
+var jsFiles = ['*.js', 'src/**/*.js']; // variabler som bruges til gulp.task('serve')
 
+/*
 gulp.task('style', function () {
     return gulp.src(jsFiles)
         .pipe(jshint())
@@ -19,7 +19,7 @@ gulp.task('inject', function () {
     var wiredep = require('wiredep').stream;
     var inject = require('gulp-inject');
 
-    var injectSrc = gulp.src(['./public/css/*.css', './public/js/*.js'], {
+    var injectSrc = gulp.src(['./ public/css/*.css',                                 './public/js/*.js'], {
         read: false
     });
 
@@ -31,7 +31,7 @@ gulp.task('inject', function () {
 
     var options = {
         bowerJson: require('./bower.json'),
-        directory: ['./public/lib','./public/css','./public/js'],
+        directory: './public/lib',
         ignorePath: '../../public'
     };
 
@@ -40,6 +40,7 @@ gulp.task('inject', function () {
         .pipe(inject(injectSrc, injectOptions))
         .pipe(gulp.dest('./src/views'));
 });
+*/
 
 gulp.task('serve', ['style', 'inject'], function () {
     var options = {
@@ -48,7 +49,7 @@ gulp.task('serve', ['style', 'inject'], function () {
         env: {
             'PORT': 2112
         },
-        watch: (jsFiles)
+        watch: jsFiles
     };
 
     return nodemon(options)
