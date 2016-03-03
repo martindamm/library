@@ -4,7 +4,7 @@
     "description": "follow along Pluralsight video",
     "main": "app.js",
     "authors": [
-    "Martin Damm"
+    "Martin Damm",
     "martindamm@live.dk>"
   ],
     "license": "ISC",
