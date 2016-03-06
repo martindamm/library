@@ -9,13 +9,13 @@ var router = function (nav) {
             genre: 'Historical Fiction',
             author: 'Lev Nikolayevich Tolstoy',
             read: false
-                },
+        },
         {
             title: 'Les Miserable',
             genre: 'Historical Fiction',
             author: 'Victor Hugo',
             read: false
-    }];
+        }];
 
     authorRouter.route('/')
         .get(function (req, res) {
@@ -26,15 +26,15 @@ var router = function (nav) {
             });
         });
     authorRouter.route('/:id')
-        .get(function(req,res){
+        .get(function (req, res) {
             var id = req.params.id;
             res.render('authorView', {
                 title: 'Author',
                 nav: nav,
                 books: books[id]
             });
-    });
-    
+        });
+
     return authorRouter;
 };
 
